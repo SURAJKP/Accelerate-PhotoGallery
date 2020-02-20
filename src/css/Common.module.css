@@ -1,0 +1,172 @@
+body {
+    background-color: #000000;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.mainAppWrapper {
+    min-height: 600px;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-top: 2px solid #ececec;    
+}
+
+.logo img {
+    width: 500px;
+    height: 150px;
+}
+.clearfix {clear: both;}
+.breadcrumb {
+    color: #fff;
+}
+.breadcrumb a {
+    text-decoration: none;
+    color: #23CBF4;
+}
+.footer {
+    text-align: center;
+    padding: 10px;
+    color: #fff;
+    /* background-color: beige; */
+    /* font-weight: bold; */
+}
+.listWrapper {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.imgWrapper {
+    padding: 15px 6px;
+    float: left;
+    width: 15.5%;
+    border-radius: 6px;
+    text-align: center;
+  }
+
+  .imgDesc {
+    padding: 5px 5px;
+    text-align: center;
+    font-style: italic;
+    font-size: 12px;
+    text-align: right;
+    color: #fff
+  }
+
+  .imgWrapper img {
+    width: 100%;
+    height: auto;
+  }
+  
+  @media only screen and (max-width: 700px) {
+    .imgWrapper {
+      width: 48%;
+      margin: 6px 0;
+    }
+  }
+  
+  @media only screen and (max-width: 500px) {
+    .imgWrapper {
+      width: 100%;
+    }
+  }
+
+  /** LIGHTBOX MARKUP **/
+  .thumbnail {
+    border-radius: 12px;
+    /* margin: 5px; */
+  }
+
+.lightbox {
+	/** Default lightbox to hidden */
+	display: none;
+
+	/** Position and style */
+	position: fixed;
+	z-index: 999;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+}
+
+.lightbox img {
+	/** Pad the lightbox image */
+	max-width: 90%;
+	max-height: 80%;
+	margin-top: 2%;
+}
+
+.lightbox:target {
+	/** Remove default browser outline */
+	outline: none;
+
+	/** Unhide lightbox **/
+	display: block;
+}
+
+.photoBox {
+
+}
+
+.lightbox .photoDesc p{
+    text-decoration: none;
+    color: #fff;
+}
+
+.photoDesc p{
+    margin: 0;
+    font-style: italic;
+    text-transform: capitalize;
+    padding: 10px;
+}
+
+.photoHolder {
+    position: relative;
+    text-align: center;
+    float: left;
+    border-radius: 12px;
+    /* width: 14.5%; */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 1%;    
+    /* min-height: 230px; */
+}
+
+.photoHolder .photoDesc {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease; 
+    color: #fff;   
+}
+.photoDesc {
+    border-radius: 12px;
+}
+
+.photoHolder:hover .photoDesc {
+    height: 100%;
+    opacity: 1;
+    position: absolute;
+    top: 30%    
+ }
+
+ .photoHolder:hover .thumbnail {
+    opacity: 0.4
+ } 
+
+.photoHolder:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.2), 0 14px 28px 0 rgba(0, 0, 0, 0.19);
+}
+
+.photoHolder::after {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.2), 0 14px 28px 0 rgba(0, 0, 0, 0.19);
+    opacity: 0; /* hide the hover shadow */
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .photoHolder:hover::after  {
+    opacity: 1; /* show the hover shadow */
+  }

@@ -1,0 +1,47 @@
+body {
+    padding-top: 85px;
+}  
+
+img.brand {
+    width: 65px;
+}
+
+img.notFound {
+    display: block;
+    margin-top: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: white !important;
+}
+
+.my-4 {
+    background-color: blueviolet;
+}
+
+input.error {
+    border: 1px solid #EADAE4;
+  }
+  
+  .error {
+    color:#db2269;
+    font-size: 0.625em;
+    display: relative;
+  }
+  
+  .center {
+    margin: auto;
+    width: 50%;
+    max-width: 400px;
+    min-width: 150px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+  }
+  div.loader {
+    font-size: 200px;
+  }

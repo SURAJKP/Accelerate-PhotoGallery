@@ -1,0 +1,92 @@
+.ffolder{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+}
+
+.ffolder.medium{
+  margin-top: 16px;
+  width: 176px;
+  height: 122px;
+  border-radius: 0px 10px 10px 10px;
+}
+
+.ffolder:before{
+  content: '';
+  display: block;
+  position: absolute;
+}
+
+.ffolder:after{
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+}
+
+.ffolder.medium:before{
+  top:-16px;
+  left: 0;
+  width: 64px;
+  height: 16px;
+  border-radius: 10px 0px 0px 0px;
+}
+
+.ffolder.medium:after{
+  top:-32px;
+  left: 48px;
+  border: 16px solid transparent;
+}
+
+.ffolder span, .ffolder i{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.ffolder span{
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 15px;
+    /* white-space: nowrap; */
+    width: 125px;
+    text-transform: uppercase;
+    /* font-weight: bold; */
+}
+
+.ffolder.medium i{ font-size: 53px;}
+
+/*Available colors*/
+.ffolder.cyan{ background-color: #23CBF4;}
+.ffolder.cyan:before, .ffolder.cyan span{ background-color: #06BAEE;}
+.ffolder.cyan:after{ border-bottom-color: #06BAEE;}
+.ffolder.cyan span{color: #FFFFFF;}
+.ffolder.cyan i{color: #06BAEE;}
+
+.ffolder.yellow{ background-color: #FFBD00;}
+.ffolder.yellow:before, .ffolder.yellow span{ background-color: #F1A402;}
+.ffolder.yellow:after{ border-bottom-color: #F1A402;}
+.ffolder.yellow span{color: #FFFFFF;}
+.ffolder.yellow i{color: #F1A402;}
+
+
+.ffolder.pink{ background-color: #FF7F92;}
+.ffolder.pink:before, .ffolder.pink span{ background-color: #FF5E6E;}
+.ffolder.pink:after{ border-bottom-color: #FF5E6E;}
+.ffolder.pink span{color: #FFFFFF;}
+.ffolder.pink i{color: #FF5E6E;}
+
+.ffolder.green{ background-color: #62DE82;}
+.ffolder.green:before, .ffolder.green span{ background-color: #66CA7F;}
+.ffolder.green:after{ border-bottom-color: #66CA7F;}
+.ffolder.green span{background-color: transparent;}
+.ffolder.green i{color: #54C170;}
+
+.ffolder.gray{ background-color: #829aa8;}
+.ffolder.gray:before, .ffolder.gray span{ background-color: #ccc;}
+.ffolder.gray:after{ border-bottom-color: #687F8C;}
+.ffolder.gray span{background-color:transparent;text-transform: capitalize;font-size: 16px;color:#fff;text-align: left;}
+.ffolder.gray i{color: #fff;}
